@@ -6,13 +6,6 @@
     "remotingEnabled": true,
     "connector": "soap"
   },
-  "SepPaymentSoapDS": {
-    "url": "https://sep.shaparak.ir/payment.aspx",
-    "name": "SepPaymentSoapDS",
-    "wsdl": "https://sep.shaparak.ir/payment.aspx?wsdl",
-    "remotingEnabled": true,
-    "connector": "soap"
-  },
   "SepReferencePaymentSoapDS": {
     "url": "https://sep.shaparak.ir/payments/referencepayment.asmx",
     "name": "SepReferencePaymentSoapDS",
