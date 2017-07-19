@@ -1,0 +1,30 @@
+{
+  "name": "reverseTransaction",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": "false",
+  "excludeBaseProperties": [
+    "id"
+  ],
+  "properties": {
+    "String_1": {
+      "type": "string"
+    },
+    "String_2": {
+      "type": "string"
+    },
+    "Username": {
+      "type": "string"
+    },
+    "Password": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

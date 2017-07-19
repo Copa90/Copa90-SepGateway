@@ -32,5 +32,37 @@
   "RequestMultiSettleTypeTokenResponse": {
     "dataSource": null,
     "public": true
+  },
+  "verifyTransaction": {
+    "dataSource": null,
+    "public": true
+  },
+  "verifyTransactionResponse": {
+    "dataSource": null,
+    "public": true
+  },
+  "verifyTransaction1": {
+    "dataSource": null,
+    "public": true
+  },
+  "verifyTransaction1Response": {
+    "dataSource": null,
+    "public": true
+  },
+  "reverseTransaction": {
+    "dataSource": null,
+    "public": true
+  },
+  "reverseTransactionResponse": {
+    "dataSource": null,
+    "public": true
+  },
+  "reverseTransaction1": {
+    "dataSource": null,
+    "public": true
+  },
+  "reverseTransaction1Response": {
+    "dataSource": null,
+    "public": true
   }
 }

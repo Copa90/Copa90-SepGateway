@@ -4,7 +4,7 @@ var server = require('../../server/server');
 
 module.exports = function(PaymentIFBindingPaymentIFBindingSoap) {
 
-  var soapDataSource = server.datasources.SepInitPaymentSoapDS;
+  var soapDataSource = server.datasources.SepReferencePaymentSoapDS;
   var PaymentIFBindingPaymentIFBindingSoap;
 
   soapDataSource.once('connected', function () {
@@ -14,26 +14,52 @@ module.exports = function(PaymentIFBindingPaymentIFBindingSoap) {
 
 
   /**
-   * RequestToken
-   * @param {RequestToken} RequestToken RequestToken
+   * verifyTransaction
+   * @param {verifyTransaction} verifyTransaction verifyTransaction
    * @callback {Function} callback Callback function
    * @returns {any} callback containing error or result. Result is the response/soap body in JSON form.
    */
-  PaymentIFBindingPaymentIFBindingSoap.RequestToken = function(RequestToken, callback) {
-      PaymentIFBindingPaymentIFBindingSoap.RequestToken(RequestToken, function (err, response) {
+  PaymentIFBindingPaymentIFBindingSoap.verifyTransaction = function(verifyTransaction, callback) {
+      PaymentIFBindingPaymentIFBindingSoap.verifyTransaction(verifyTransaction, function (err, response) {
         var result = response;
         callback(err, result);
       });
   }
   
   /**
-   * RequestMultiSettleTypeToken
-   * @param {RequestMultiSettleTypeToken} RequestMultiSettleTypeToken RequestMultiSettleTypeToken
+   * verifyTransaction1
+   * @param {verifyTransaction1} verifyTransaction1 verifyTransaction1
    * @callback {Function} callback Callback function
    * @returns {any} callback containing error or result. Result is the response/soap body in JSON form.
    */
-  PaymentIFBindingPaymentIFBindingSoap.RequestMultiSettleTypeToken = function(RequestMultiSettleTypeToken, callback) {
-      PaymentIFBindingPaymentIFBindingSoap.RequestMultiSettleTypeToken(RequestMultiSettleTypeToken, function (err, response) {
+  PaymentIFBindingPaymentIFBindingSoap.verifyTransaction1 = function(verifyTransaction1, callback) {
+      PaymentIFBindingPaymentIFBindingSoap.verifyTransaction1(verifyTransaction1, function (err, response) {
+        var result = response;
+        callback(err, result);
+      });
+  }
+  
+  /**
+   * reverseTransaction
+   * @param {reverseTransaction} reverseTransaction reverseTransaction
+   * @callback {Function} callback Callback function
+   * @returns {any} callback containing error or result. Result is the response/soap body in JSON form.
+   */
+  PaymentIFBindingPaymentIFBindingSoap.reverseTransaction = function(reverseTransaction, callback) {
+      PaymentIFBindingPaymentIFBindingSoap.reverseTransaction(reverseTransaction, function (err, response) {
+        var result = response;
+        callback(err, result);
+      });
+  }
+  
+  /**
+   * reverseTransaction1
+   * @param {reverseTransaction1} reverseTransaction1 reverseTransaction1
+   * @callback {Function} callback Callback function
+   * @returns {any} callback containing error or result. Result is the response/soap body in JSON form.
+   */
+  PaymentIFBindingPaymentIFBindingSoap.reverseTransaction1 = function(reverseTransaction1, callback) {
+      PaymentIFBindingPaymentIFBindingSoap.reverseTransaction1(reverseTransaction1, function (err, response) {
         var result = response;
         callback(err, result);
       });
@@ -41,44 +67,84 @@ module.exports = function(PaymentIFBindingPaymentIFBindingSoap) {
   
   // Map to REST/HTTP
 
-  PaymentIFBindingPaymentIFBindingSoap.remoteMethod('RequestToken',
+  PaymentIFBindingPaymentIFBindingSoap.remoteMethod('verifyTransaction',
   { isStatic: true,
   produces: 
    [ { produces: 'application/json' },
      { produces: 'application/xml' } ],
   accepts: 
-   [ { arg: 'RequestToken',
-       type: 'RequestToken',
-       description: 'RequestToken',
+   [ { arg: 'verifyTransaction',
+       type: 'verifyTransaction',
+       description: 'verifyTransaction',
        required: true,
        http: { source: 'body' } } ],
   returns: 
    [ { arg: 'data',
-       type: 'RequestTokenResponse',
-       description: 'RequestTokenResponse',
+       type: 'verifyTransactionResponse',
+       description: 'verifyTransactionResponse',
        root: true } ],
-  http: { verb: 'post', path: '/RequestToken' },
-  description: 'RequestToken' }
+  http: { verb: 'post', path: '/verifyTransaction' },
+  description: 'verifyTransaction' }
   );
   
-  PaymentIFBindingPaymentIFBindingSoap.remoteMethod('RequestMultiSettleTypeToken',
+  PaymentIFBindingPaymentIFBindingSoap.remoteMethod('verifyTransaction1',
   { isStatic: true,
   produces: 
    [ { produces: 'application/json' },
      { produces: 'application/xml' } ],
   accepts: 
-   [ { arg: 'RequestMultiSettleTypeToken',
-       type: 'RequestMultiSettleTypeToken',
-       description: 'RequestMultiSettleTypeToken',
+   [ { arg: 'verifyTransaction1',
+       type: 'verifyTransaction1',
+       description: 'verifyTransaction1',
        required: true,
        http: { source: 'body' } } ],
   returns: 
    [ { arg: 'data',
-       type: 'RequestMultiSettleTypeTokenResponse',
-       description: 'RequestMultiSettleTypeTokenResponse',
+       type: 'verifyTransaction1Response',
+       description: 'verifyTransaction1Response',
        root: true } ],
-  http: { verb: 'post', path: '/RequestMultiSettleTypeToken' },
-  description: 'RequestMultiSettleTypeToken' }
+  http: { verb: 'post', path: '/verifyTransaction1' },
+  description: 'verifyTransaction1' }
+  );
+  
+  PaymentIFBindingPaymentIFBindingSoap.remoteMethod('reverseTransaction',
+  { isStatic: true,
+  produces: 
+   [ { produces: 'application/json' },
+     { produces: 'application/xml' } ],
+  accepts: 
+   [ { arg: 'reverseTransaction',
+       type: 'reverseTransaction',
+       description: 'reverseTransaction',
+       required: true,
+       http: { source: 'body' } } ],
+  returns: 
+   [ { arg: 'data',
+       type: 'reverseTransactionResponse',
+       description: 'reverseTransactionResponse',
+       root: true } ],
+  http: { verb: 'post', path: '/reverseTransaction' },
+  description: 'reverseTransaction' }
+  );
+  
+  PaymentIFBindingPaymentIFBindingSoap.remoteMethod('reverseTransaction1',
+  { isStatic: true,
+  produces: 
+   [ { produces: 'application/json' },
+     { produces: 'application/xml' } ],
+  accepts: 
+   [ { arg: 'reverseTransaction1',
+       type: 'reverseTransaction1',
+       description: 'reverseTransaction1',
+       required: true,
+       http: { source: 'body' } } ],
+  returns: 
+   [ { arg: 'data',
+       type: 'reverseTransaction1Response',
+       description: 'reverseTransaction1Response',
+       root: true } ],
+  http: { verb: 'post', path: '/reverseTransaction1' },
+  description: 'reverseTransaction1' }
   );
   
 }
