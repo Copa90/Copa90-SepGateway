@@ -1,1 +1,9 @@
-{}
+{
+  "SepSoapDS": {
+    "url": "https://sep.shaparak.ir/payments/initpayment.asmx",
+    "name": "SepSoapDS",
+    "wsdl": "https://sep.shaparak.ir/payments/initpayment.asmx?wsdl",
+    "remotingEnabled": true,
+    "connector": "soap"
+  }
+}
