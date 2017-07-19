@@ -12,5 +12,25 @@
       "../common/mixins",
       "./mixins"
     ]
+  },
+  "soap_PaymentIFBindingSoap": {
+    "dataSource": null,
+    "public": true
+  },
+  "RequestToken": {
+    "dataSource": null,
+    "public": true
+  },
+  "RequestTokenResponse": {
+    "dataSource": null,
+    "public": true
+  },
+  "RequestMultiSettleTypeToken": {
+    "dataSource": null,
+    "public": true
+  },
+  "RequestMultiSettleTypeTokenResponse": {
+    "dataSource": null,
+    "public": true
   }
 }

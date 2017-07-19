@@ -1,0 +1,54 @@
+{
+  "name": "RequestToken",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": "false",
+  "excludeBaseProperties": [
+    "id"
+  ],
+  "properties": {
+    "TermID": {
+      "type": "string"
+    },
+    "ResNum": {
+      "type": "string"
+    },
+    "TotalAmount": {
+      "type": "number"
+    },
+    "SegAmount1": {
+      "type": "number"
+    },
+    "SegAmount2": {
+      "type": "number"
+    },
+    "SegAmount3": {
+      "type": "number"
+    },
+    "SegAmount4": {
+      "type": "number"
+    },
+    "SegAmount5": {
+      "type": "number"
+    },
+    "SegAmount6": {
+      "type": "number"
+    },
+    "AdditionalData1": {
+      "type": "string"
+    },
+    "AdditionalData2": {
+      "type": "string"
+    },
+    "Wage": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
