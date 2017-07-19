@@ -41,14 +41,6 @@
     "dataSource": null,
     "public": true
   },
-  "verifyTransaction1": {
-    "dataSource": null,
-    "public": true
-  },
-  "verifyTransaction1Response": {
-    "dataSource": null,
-    "public": true
-  },
   "reverseTransaction": {
     "dataSource": null,
     "public": true
@@ -57,12 +49,4 @@
     "dataSource": null,
     "public": true
   },
-  "reverseTransaction1": {
-    "dataSource": null,
-    "public": true
-  },
-  "reverseTransaction1Response": {
-    "dataSource": null,
-    "public": true
-  }
 }
